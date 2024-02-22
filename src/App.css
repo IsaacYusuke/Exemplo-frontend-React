@@ -76,3 +76,23 @@ nav ul li a {
 .price {
   font-weight: bold;
 }
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaço entre os itens */
+  justify-content: center; /* Centraliza os itens na linha */
+}
+.product-grid li {
+  flex: 1 1 200px; /* Cresce para ocupar espaço, mas começa com pelo menos 200px */
+  list-style-type: none; /* Remove os marcadores de lista */
+}
+.product-grid img {
+  max-width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
+}
+.product-grid .product-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}

@@ -15,14 +15,15 @@ function ProductList() {
   return (
     <div>
       <h2>Produtos</h2>
-      <ul>
+      <ul className="product-grid">
         {products.map(product => (
-          <li key={product.id}>
-            <h3>{product.nome}</h3>
-            <p>{product.descricao}</p>
-            <p>R$ {product.preco}</p>
-          </li>
-        ))}
+            <li key={product.id}>
+                <img src={product.imagem} alt={product.nome} style={{ height: '100px', width: 'auto' }} />
+                <h3>{product.nome}</h3>
+                <p>{product.descricao}</p>
+                <p>R$ {product.preco}</p>
+            </li>
+         ))} 
       </ul>
     </div>
   );
