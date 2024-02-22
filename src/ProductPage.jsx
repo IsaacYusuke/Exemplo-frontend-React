@@ -1,12 +1,14 @@
+// src/ProductPage.js
 import React from 'react';
+import ProductList from './ProductList'; // Importa o componente ProductList
 
-function HomePage() {
+function ProductPage() {
   return (
     <div>
-      <h1>Bem-vindo à Minha Loja</h1>
-      {/* Conteúdo da página inicial */}
+      <h1>Produtos</h1>
+      <ProductList /> {/* Inclui a lista de produtos*/}
     </div>
   );
 }
 
-export default HomePage;
+export default ProductPage;
