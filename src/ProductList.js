@@ -1,19 +1,29 @@
-// src/ProductList.js
-import React from 'react';
-import products from './productsData'; // Importa os dados dos produtos
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function ProductList() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/router/items/') // Ajuste a URL para seu endpoint específico
+      .then(response => {
+        setProducts(response.data);
+      })
+      .catch(error => console.error("Houve um erro ao buscar os produtos:", error));
+  }, []);
+
   return (
-    <div className="product-list">
-      {products.map((product) => (
-        <div key={product.id} className="product-item">
-          <img src={product.imageUrl} alt={product.name} />
-          <h3>{product.name}</h3>
-          <p>{product.description}</p>
-          <p className="price">{product.price}</p>
-          <button>Comprar</button>
-        </div>
-      ))}
+    <div>
+      <h2>Produtos</h2>
+      <ul>
+        {products.map(product => (
+          <li key={product.id}>
+            <h3>{product.nome}</h3>
+            <p>{product.descricao}</p>
+            <p>R$ {product.preco}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
