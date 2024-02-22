@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import NavBar from './NavBar'; // Importe o NavBar
+import HomePage from './HomePage';
+import ProductPage from './ProductPage';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar /> {/* Inclua o NavBar aqui */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<ProductPage />} />
+        {/* Adicione mais rotas conforme necessário */}
+      </Routes>
     </div>
   );
 }
