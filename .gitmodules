@@ -1,0 +1,3 @@
+[submodule "Banco-de-dados-loja"]
+	path = Banco-de-dados-loja
+	url = https://github.com/IsaacYusuke/Banco-de-dados-loja.git
