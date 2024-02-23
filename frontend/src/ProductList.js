@@ -14,7 +14,7 @@ function ProductList() {
 
   return (
     <div>
-      <h2>Produtos</h2>
+      {/*<h2>Produtos</h2>*/}
       <ul className="product-grid">
         {products.map(product => (
             <li key={product.id}>

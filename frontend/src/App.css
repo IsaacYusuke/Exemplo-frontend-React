@@ -1,3 +1,7 @@
+body {
+  background-color: #c6e2eb; /* Substitua #f0f0f0 pela cor desejada */
+}
+
 .App {
   text-align: center;
 }
@@ -95,4 +99,16 @@ nav ul li a {
   border: 1px solid #ddd;
   padding: 10px;
   text-align: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: auto; /* Faz o container ocupar a altura total da viewport */
+}
+
+.image-container img {
+  max-width: 50%; /* Garante que a imagem não ultrapasse a largura do container */
+  max-height: 80vh; /* Opcional: limita a altura da imagem */
 }
